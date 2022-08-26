@@ -58,6 +58,6 @@ def input_element():                                        #user can add indivi
 
 def apply_changes():                                         #rewrites the json with either a new dictionary or with the updated one
     with open('car_sales.json', 'w') as car_json:
-        json.dump(car_sales_l, car_json)
+        json.dump(car_sales_l, car_json, indent = 4)
 
 add_or_restart_json()
