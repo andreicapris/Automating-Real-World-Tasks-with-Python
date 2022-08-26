@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "car": {
+            "car_make": "Ford",
+            "car_model": "Club Wagon",
+            "car_year": 1997
+        },
+        "price": "$5179.39",
+        "total_sales": 446
+    },
+    {
+        "id": 2,
+        "car": {
+            "car_make": "Acura",
+            "car_model": "TL",
+            "car_year": 2005
+        },
+        "price": "$14558.19",
+        "total_sales": 589
+    },
+    {
+        "id": 3,
+        "car": {
+            "car_make": "Volkswagen",
+            "car_model": "Jetta",
+            "car_year": 2009
+        },
+        "price": "$14879.11",
+        "total_sales": 825
+    },
+    {
+        "id": 4,
+        "car": {
+            "car_make": "Chevrolet",
+            "car_model": "Uplander",
+            "car_year": 2006
+        },
+        "price": "$17045.06",
+        "total_sales": 689
+    },
+    {
+        "id": 5,
+        "car": {
+            "car_make": "Plymouth",
+            "car_model": "Roadrunner",
+            "car_year": 1969
+        },
+        "price": "$14770.44",
+        "total_sales": 691
+    },
+    {
+        "id": 6,
+        "car": {
+            "car_make": "GMC",
+            "car_model": "Safari",
+            "car_year": 200
+        },
+        "price": "$13390.83",
+        "total_sales": 531
+    },
+    {
+        "id": 7,
+        "car": {
+            "car_make": "Lamborghini",
+            "car_model": "Murcielago",
+            "car_year": 2003
+        },
+        "price": "$13390.83",
+        "total_sales": 531
+    },
+    {
+        "id": 8,
+        "car": {
+            "car_make": "GMC",
+            "car_model": "3500",
+            "car_year": 1999
+        },
+        "price": "$19292.10",
+        "total_sales": 638
+    },
+    {
+        "id": 9,
+        "car": {
+            "car_make": "Maybach",
+            "car_model": "62",
+            "car_year": 2004
+        },
+        "price": "$11020.45",
+        "total_sales": 945
+    },
+    {
+        "id": 10,
+        "car": {
+            "car_make": "Chevrolet",
+            "car_model": "Cavalier",
+            "car_year": 2001
+        },
+        "price": "$10708.87",
+        "total_sales": 870
+    }
+]
