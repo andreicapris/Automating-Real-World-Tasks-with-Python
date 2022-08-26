@@ -33,10 +33,14 @@ def create_dictionary():                                    #based on the 2 glob
             for v in car_key:
                 print( "{} = ".format(v))
                 car_properties_d[v] = input()
+                if car_properties_d[v].isdigit() and v == "car_year":
+                    car_properties_d[v] = int(car_properties_d[v])
             car_sales_d['car'] = car_properties_d
         else:
             print("{} = ".format(k))
             car_sales_d[k] = input()
+            if car_sales_d[k].isdigit() and (k == "id" or k == "total_sales"):
+                car_sales_d[k] = int(car_sales_d[k])
     return car_sales_d
 
 def input_element():                                        #user can add individual elements to the list of dictionaries no will end the script
@@ -54,6 +58,6 @@ def input_element():                                        #user can add indivi
 
 def apply_changes():                                         #rewrites the json with either a new dictionary or with the updated one
     with open('car_sales.json', 'w') as car_json:
-        json.dump(car_sales_l, car_json, indent = 4)
+        json.dump(car_sales_l, car_json)
 
 add_or_restart_json()
