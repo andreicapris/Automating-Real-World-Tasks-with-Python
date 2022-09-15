@@ -54,7 +54,7 @@
         "car": {
             "car_make": "GMC",
             "car_model": "Safari",
-            "car_year": 200
+            "car_year": 2000
         },
         "price": "$13390.83",
         "total_sales": 531
@@ -98,5 +98,35 @@
         },
         "price": "$10708.87",
         "total_sales": 870
+    },
+    {
+        "id": 11,
+        "car": {
+            "car_make": "Dacia",
+            "car_model": "Logan",
+            "car_year": 2003
+        },
+        "price": "$10000",
+        "total_sales": 10000
+    },
+    {
+        "id": 12,
+        "car": {
+            "car_make": "Volkswagen",
+            "car_model": "Polo",
+            "car_year": 2004
+        },
+        "price": "$12000",
+        "total_sales": 3123
+    },
+    {
+        "id": 13,
+        "car": {
+            "car_make": "Dacia",
+            "car_model": "Nova",
+            "car_year": 2003
+        },
+        "price": "$4000",
+        "total_sales": 12345
     }
 ]

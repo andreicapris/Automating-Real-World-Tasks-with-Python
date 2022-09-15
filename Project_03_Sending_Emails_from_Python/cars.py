@@ -13,6 +13,8 @@ def json_to_dict(in_path):
         json_dict = json.load(in_json)
     return json_dict
 
+dict_list = json_to_dict(json_path)
+
 #Computes the car that generated the most revenue. 
 def max_revenue(in_dict):
     max = 0
@@ -25,7 +27,7 @@ def max_revenue(in_dict):
     return most_revenue, max           #Returns a tuple first element is a dictionary and the second is a float containing most revenue value.
 
 #For debugging purposes
-#print(max_revenue(json_to_dict(json_path)))  
+#print(max_revenue(dict_list))
 
 #Computes which car had the most number of sales.
 def most_sales_units(in_dict):
@@ -37,7 +39,7 @@ def most_sales_units(in_dict):
     return max_element                 #Returns a dictionary
 
 #For debugging purposes
-#print(most_sales_units(json_to_dict(json_path)))
+#print(most_sales_units(dict_list))
 
 #Computes the year with the most car sales.
 def most_popular_year(in_dict):
@@ -57,20 +59,20 @@ def most_popular_year(in_dict):
     return best_year, max              #Returns a tuple
 
 #For debugging purposes
-#print(most_popular_year(json_to_dict(json_path)))
+#print(most_popular_year(dict_list))
 
 def to_summary():
-    most_revenue = max_revenue(json_to_dict(json_path))
-    print(type(most_revenue[0]))
-    print(type(json_to_dict(json_path)))
+    most_revenue = max_revenue(dict_list)
     first_string = "The {} {} generated the most revenue: {}".format(most_revenue[0]['car']['car_make'], most_revenue[0]['car']['car_model'], most_revenue[1])
     print(first_string)
 
-    most_sales = most_sales_units(json_to_dict(json_path))
+    most_sales = most_sales_units(dict_list)
     second_string = "The {} {} ({}) had the most sales: {}".format(most_sales['car']['car_make'], most_sales['car']['car_model'], most_sales['car']['car_year'], most_sales['total_sales'])
     print(second_string)
 
-    best_year_units = most_popular_year(json_to_dict(json_path))
+    best_year_units = most_popular_year(dict_list)
     third_string = "The most popular year was {} with {} sales.".format(best_year_units[0], best_year_units[1])
     print(third_string)
+
+    return first_string, second_string, third_string
 to_summary()
