@@ -1,4 +1,5 @@
 from email_sales import *
+from gen_pdf import *
 import os
 import json
 
@@ -59,20 +60,29 @@ def most_popular_year(in_dict):
     return best_year, max              #Returns a tuple
 
 #For debugging purposes
-#print(most_popular_year(dict_list))
+print(most_popular_year(dict_list))
+print(type(most_popular_year(dict_list)))
 
 def to_summary():
     most_revenue = max_revenue(dict_list)
     first_string = "The {} {} generated the most revenue: {}".format(most_revenue[0]['car']['car_make'], most_revenue[0]['car']['car_model'], most_revenue[1])
-    print(first_string)
+#    print(first_string)
 
     most_sales = most_sales_units(dict_list)
     second_string = "The {} {} ({}) had the most sales: {}".format(most_sales['car']['car_make'], most_sales['car']['car_model'], most_sales['car']['car_year'], most_sales['total_sales'])
-    print(second_string)
+#    print(second_string)
 
     best_year_units = most_popular_year(dict_list)
     third_string = "The most popular year was {} with {} sales.".format(best_year_units[0], best_year_units[1])
-    print(third_string)
+#    print(third_string)
+    
+    summary = first_string + "\n" + second_string + "\n" + third_string
+#    print(summary)
 
     return first_string, second_string, third_string
-to_summary()
+
+#Create the pdf using the current items.
+generate_pdf(to_summary(), create_list(dict_list))
+#Generate the email and send it when prompted.
+generate_email(to_summary())
+
