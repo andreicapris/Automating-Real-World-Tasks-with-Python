@@ -23,3 +23,5 @@ def process_images():
                 new_filename = found_pattern[1]+".jpeg"
                 full_destination =  os.path.join(destination_path, new_filename)
                 new_im.save(full_destination)
+
+process_images()
