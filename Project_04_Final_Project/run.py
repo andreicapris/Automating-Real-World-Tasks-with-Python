@@ -30,7 +30,7 @@ def get_text_inf(path):
     txt_list = []
     with open(path) as file:
     for line in file.readlines():
-        if line.strip() != '' #two of the descriptions have a newline at the end of the file that causes the list to not be properly generated
+        if line.strip() != '': #two of the descriptions have a newline at the end of the file that causes the list to not be properly generated
             txt_list.append(line.strip())
     return txt_list
 
